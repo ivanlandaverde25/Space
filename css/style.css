@@ -1,0 +1,62 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Barlow Condensed", sans-serif;
+  background: #000;
+  color: #fff;
+}
+
+:root {
+  --colorBlanco: rgba(255, 255, 255, 0.5);
+}
+
+.container {
+  min-width: 100%;
+  min-height: 100vh;
+  background: url("../assets/Desktop/background-home-desktop.jpg") no-repeat center/cover;
+  padding-top: 50px;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.container-menu {
+  border: 3px solid blue;
+  margin-left: 60px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.menu {
+  height: 100%;
+  width: 70%;
+  position: relative;
+}
+.menu-list {
+  height: 100%;
+  position: relative;
+}
+.menu-list-item-link {
+  position: relative;
+  height: 100%;
+  border: 3px solid green;
+  text-decoration: none;
+  color: var(--colorBlanco);
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  padding: 20px 10px;
+  height: auto;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,30 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Barlow Condensed', sans-serif;
+    background: #000;
+    color: #fff;
+}
+
+:root{
+    --colorBlanco: rgba(255, 255, 255, 0.5);
+}
+
+.container {
+    min-width: 100%;
+    min-height: 100vh;
+    background: url("../assets/Desktop/background-home-desktop.jpg") no-repeat center/cover;
+    padding-top: 50px;
+}
+
+.text-bold{
+    font-weight: bold;
+}
+
+@import "menu";
+@import "main";
