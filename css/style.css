@@ -80,7 +80,7 @@ body {
 
 .menu {
   position: relative;
-  width: 60%;
+  width: 65%;
   display: flex;
   flex-flow: row wrap;
   backdrop-filter: blur(25px);
@@ -90,11 +90,11 @@ body {
 .menu::after {
   content: "";
   height: 2px;
-  width: 55%;
+  width: 50%;
   display: block;
   position: absolute;
   top: 50%;
-  left: -53%;
+  left: -45%;
   z-index: -1;
   background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(25px);
@@ -163,7 +163,6 @@ body {
   height: 82vh;
   display: grid;
   grid-template: "main-container-description main-container-action" auto/50% 50%;
-  border: 3px solid blue;
 }
 .main-container-description {
   grid-area: main-container-description;
@@ -210,7 +209,6 @@ body {
   height: 82vh;
   display: grid;
   grid-template: "main-container-description main-container-action" auto/50% 50%;
-  border: 3px solid red;
 }
 
 /*# sourceMappingURL=style.css.map */
