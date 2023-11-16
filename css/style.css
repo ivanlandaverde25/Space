@@ -14,6 +14,7 @@ body {
 :root {
   --colorBlanco: rgba(255, 255, 255, 1);
   --colorBlanco500: rgba(255, 255, 255, 0.5);
+  --colorNegroBoton: rgba(11, 13, 24, 1);
 }
 
 .container {
@@ -24,8 +25,48 @@ body {
 }
 
 .text-bold {
-  font-weight: bold;
+  font-weight: 600;
   margin-right: 15px;
+}
+
+.text100 {
+  font-weight: 100;
+}
+
+.text200 {
+  font-weight: 200;
+}
+
+.text300 {
+  font-weight: 300;
+}
+
+.text400 {
+  font-weight: 400;
+}
+
+.text500 {
+  font-weight: 500;
+}
+
+.text600 {
+  font-weight: 600;
+}
+
+.titulo1 {
+  font-size: 9em;
+}
+
+.titulo2 {
+  font-size: 1.8em;
+}
+
+.texto1 {
+  font-size: 1.5em;
+}
+
+.texto2 {
+  font-size: 1.2em;
 }
 
 .container-menu {
@@ -34,7 +75,7 @@ body {
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid red;
+  height: 12vh;
 }
 
 .menu {
@@ -113,6 +154,51 @@ body {
   bottom: 0%;
   left: -50%;
   transition: 0.4s all ease;
+}
+
+.main-container {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  height: 82vh;
+  display: grid;
+  grid-template: "main-container-description main-container-action" auto/50% 50%;
+}
+.main-container-description {
+  grid-area: main-container-description;
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: self-start;
+  width: 60%;
+  padding-top: 120px;
+}
+.main-container-action {
+  grid-area: main-container-action;
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding-top: 120px;
+}
+.main-container-action-button {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  font-family: "Barlow Condensed", sans-serif;
+  background-color: var(--colorBlanco);
+  color: var(--colorNegroBoton);
+  letter-spacing: 5px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  transition: 0.3s all ease-in-out;
+}
+.main-container-action-button:hover {
+  box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.3), 0px 0px 35px rgba(255, 255, 255, 0.3), 0px 0px 45px rgba(255, 255, 255, 0.3);
 }
 
 /*# sourceMappingURL=style.css.map */

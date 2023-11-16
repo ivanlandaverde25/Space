@@ -14,6 +14,7 @@ body {
 :root{
     --colorBlanco: rgba(255, 255, 255, 1);
     --colorBlanco500: rgba(255, 255, 255, 0.5);
+    --colorNegroBoton: rgba(11, 13, 24, 1);
 }
 
 .container {
@@ -23,10 +24,6 @@ body {
     padding-top: 40px;
 }
 
-.text-bold{
-    font-weight: bold;
-    margin-right: 15px
-}
-
+@import "fonts";
 @import "menu";
 @import "main";
