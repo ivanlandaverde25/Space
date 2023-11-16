@@ -21,7 +21,6 @@ body {
   min-width: 100%;
   min-height: 100vh;
   padding-top: 40px;
-  background: url(../assets/Desktop/background-home-desktop.jpg) no-repeat center/cover;
 }
 
 .text-bold {
@@ -67,6 +66,18 @@ body {
 
 .texto2 {
   font-size: 1.2em;
+}
+
+.blanco500 {
+  color: var(--colorBlanco500);
+}
+
+.mayuscula {
+  text-transform: uppercase;
+}
+
+.minuscula {
+  text-transform: lowercase;
 }
 
 .container-menu {
@@ -156,13 +167,17 @@ body {
   transition: 0.4s all ease;
 }
 
+.container-image-home {
+  background: url(../assets/Desktop/background-home-desktop.jpg) no-repeat center/cover;
+}
+
 .main-container {
   position: relative;
   width: 80%;
   margin: auto;
   height: 82vh;
   display: grid;
-  grid-template: "main-container-description main-container-action" auto/50% 50%;
+  grid-template: "main-container-description main-container-action" auto/40% 60%;
 }
 .main-container-description {
   grid-area: main-container-description;
@@ -171,7 +186,6 @@ body {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: self-start;
-  width: 60%;
   padding-top: 120px;
 }
 .main-container-action {
@@ -180,7 +194,7 @@ body {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   padding-top: 120px;
 }
 .main-container-action-button {
@@ -198,17 +212,21 @@ body {
   transition: 0.3s all ease-in-out;
 }
 .main-container-action-button:hover {
-  box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.3), 0px 0px 35px rgba(255, 255, 255, 0.3), 0px 0px 45px rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 0px 15px 75px rgba(255, 255, 255, 0.06), 0px 0px 15px 75px rgba(255, 255, 255, 0.1), 0px 0px 15px 75px rgba(255, 255, 255, 0.1);
+}
+
+.container-image-destination {
+  background: url(../assets/Desktop/background-destination-desktop.jpg) no-repeat center/cover;
 }
 
 .main-container-destination {
   position: relative;
-  background: url(../assets/Desktop/background-destination-desktop.jpg) no-repeat center/cover;
   width: 80%;
   margin: auto;
   height: 82vh;
   display: grid;
-  grid-template: "main-container-description main-container-action" auto/50% 50%;
+  grid-template: "main-container-description main-container-action" auto/40% 60%;
+  border: 3px solid red;
 }
 
 /*# sourceMappingURL=style.css.map */

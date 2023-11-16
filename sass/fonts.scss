@@ -45,3 +45,17 @@
 .texto2{
     font-size: 1.2em;
 }
+
+// Colores
+.blanco500{
+    color: var(--colorBlanco500);
+}
+
+// Estilos
+.mayuscula{
+    text-transform: uppercase;
+}
+
+.minuscula{
+    text-transform: lowercase;
+}
