@@ -17,13 +17,18 @@ body {
     --colorNegroBoton: rgba(11, 13, 24, 1);
 }
 
+@mixin bg-image($url){
+    background: url(#{$url}) no-repeat center/cover;
+}
+
 .container {
     min-width: 100%;
     min-height: 100vh;
-    background: url("../assets/Desktop/background-home-desktop.jpg") no-repeat center/cover;
     padding-top: 40px;
+    @include bg-image("../assets/Desktop/background-home-desktop.jpg");
 }
 
 @import "fonts";
 @import "menu";
 @import "main";
+@import "destination";

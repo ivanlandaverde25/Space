@@ -12,9 +12,9 @@
 // ESTILOS DE MENU
 .menu{
     position: relative;
-    width: 70%;
+    width: 60%;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     backdrop-filter: blur(25px);
     padding-left: 60px;
     background-color: rgba($color: #ffffff, $alpha: 0.03);
@@ -22,11 +22,11 @@
     &::after{
         content: '';
         height: 2px;
-        width: 35%;
+        width: 55%;
         display: block;
         position: absolute;
         top: 50%;
-        left: -33%;
+        left: -53%;
         z-index: -1;
         background-color: rgba($color: #ffffff, $alpha: 0.1);
         backdrop-filter: blur(25px);
@@ -61,7 +61,7 @@
         &-item-link{
             position: relative;
             height: 50px;
-            width: 200px;
+            width: 180px;
             padding: 40px 0px;
             text-decoration: none;
             color: var(--colorBlanco);

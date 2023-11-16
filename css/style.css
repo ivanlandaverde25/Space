@@ -20,8 +20,8 @@ body {
 .container {
   min-width: 100%;
   min-height: 100vh;
-  background: url("../assets/Desktop/background-home-desktop.jpg") no-repeat center/cover;
   padding-top: 40px;
+  background: url(../assets/Desktop/background-home-desktop.jpg) no-repeat center/cover;
 }
 
 .text-bold {
@@ -80,9 +80,9 @@ body {
 
 .menu {
   position: relative;
-  width: 70%;
+  width: 60%;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   backdrop-filter: blur(25px);
   padding-left: 60px;
   background-color: rgba(255, 255, 255, 0.03);
@@ -90,11 +90,11 @@ body {
 .menu::after {
   content: "";
   height: 2px;
-  width: 35%;
+  width: 55%;
   display: block;
   position: absolute;
   top: 50%;
-  left: -33%;
+  left: -53%;
   z-index: -1;
   background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(25px);
@@ -125,7 +125,7 @@ body {
 .menu-list-item-link {
   position: relative;
   height: 50px;
-  width: 200px;
+  width: 180px;
   padding: 40px 0px;
   text-decoration: none;
   color: var(--colorBlanco);
@@ -163,6 +163,7 @@ body {
   height: 82vh;
   display: grid;
   grid-template: "main-container-description main-container-action" auto/50% 50%;
+  border: 3px solid blue;
 }
 .main-container-description {
   grid-area: main-container-description;
@@ -199,6 +200,17 @@ body {
 }
 .main-container-action-button:hover {
   box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.3), 0px 0px 35px rgba(255, 255, 255, 0.3), 0px 0px 45px rgba(255, 255, 255, 0.3);
+}
+
+.main-container-destination {
+  position: relative;
+  background: url(../assets/Desktop/background-destination-desktop.jpg) no-repeat center/cover;
+  width: 80%;
+  margin: auto;
+  height: 82vh;
+  display: grid;
+  grid-template: "main-container-description main-container-action" auto/50% 50%;
+  border: 3px solid red;
 }
 
 /*# sourceMappingURL=style.css.map */

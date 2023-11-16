@@ -1,0 +1,16 @@
+.main-container-destination{
+    position: relative;
+    @include bg-image("../assets/Desktop/background-destination-desktop.jpg");
+    width: 80%;
+    margin: auto;
+    height: 82vh;
+    display: grid;
+    grid-template: 
+    "main-container-description main-container-action" auto/
+    50% 50%;
+    border: 3px solid red;
+}
+
+.container{
+    // @include bg-image("../assets/Desktop/background-destination-desktop.jpg");
+}
