@@ -12,18 +12,20 @@ body {
 }
 
 :root{
-    --colorBlanco: rgba(255, 255, 255, 0.5);
+    --colorBlanco: rgba(255, 255, 255, 1);
+    --colorBlanco500: rgba(255, 255, 255, 0.5);
 }
 
 .container {
     min-width: 100%;
     min-height: 100vh;
     background: url("../assets/Desktop/background-home-desktop.jpg") no-repeat center/cover;
-    padding-top: 50px;
+    padding-top: 40px;
 }
 
 .text-bold{
     font-weight: bold;
+    margin-right: 15px
 }
 
 @import "menu";

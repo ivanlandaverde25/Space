@@ -1,44 +1,97 @@
 .container-menu {
-    border: 3px solid blue;
     margin-left: 60px;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
-    // backdrop-filter: blur(15px);
+    border: 1px solid red;
 }
 
-// .container-menu::after{
-//     content: '';
-//     display: block;
-//     width: 50px;
-//     height: 1px;
-//     background-color: #fff;
-//     color: #fff;
-// }
-
+    
+// ESTILOS DE MENU
 .menu{
-    height: 100%;
-    width: 70%;
     position: relative;
+    width: 70%;
+    display: flex;
+    flex-flow: row nowrap;
+    backdrop-filter: blur(25px);
+    padding-left: 60px;
+    background-color: rgba($color: #ffffff, $alpha: 0.03);
+    
+    &::after{
+        content: '';
+        height: 2px;
+        width: 35%;
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: -33%;
+        z-index: -1;
+        background-color: rgba($color: #ffffff, $alpha: 0.1);
+        backdrop-filter: blur(25px);
+    }
+
     &-list{
-        height: 100%;
         position: relative;
+        display: flex;
+        flex-flow: row wrap;
+        height: 100px;
+        
+        &-box{
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+
+            &:hover .menu-list-item-link-hover{
+                left: 25%;
+            }
+        }
+
+        &-item{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: auto;
+            list-style-type: none;
+        }
+        
         &-item-link{
             position: relative;
-            height: 100%;
-            border: 3px solid green;
+            height: 50px;
+            width: 200px;
+            padding: 40px 0px;
             text-decoration: none;
             color: var(--colorBlanco);
             font-style: normal;
             text-transform: uppercase;
-            font-size: 1.2em;
-            padding: 20px 10px;
-            height: auto;
-            background-color: rgba(255, 255, 255, 0.5);
+            font-size: 1.4em;
+            letter-spacing: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &-active{
+                display: block;
+                position: absolute;
+                width: 50%;
+                height: 3px;
+                background-color: var(--colorBlanco);
+                bottom: 0;
+            }
+
+            &-hover{
+                display: block;
+                position: absolute;
+                width: 50%;
+                height: 3px;
+                background-color: var(--colorBlanco);
+                bottom: 0%;
+                left: -50%;
+                transition: 0.4s all ease;
+            }
         }
     }
-
 }
 
