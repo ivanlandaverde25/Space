@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -62,22 +62,79 @@
             <h2>
                 <span class="text-bold">01</span> <span class="blanco500 mayuscula">PICK YOUR DESTINATION</span>
             </h2>
-            <!-- Tabs movibles -->
-            <div class="main-container-destination-tabs">
-            </div>
-            <div class="main-container-description">
-                <h3 class="text300 titulo2" style="letter-spacing: 5px;">
-                    SO, YOU WANT TO TRAVEL TO
-                </h3>
-                <h1 class="text600 titulo1" style="letter-spacing: 25px;">
-                    SPACE
-                </h1>
-                <strong class="text200 texto2" style="line-height: 35px;">
-                    Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!
-                </strong>
-            </div>
-            <div class="main-container-action">
-                <button class="text500 titulo2 main-container-action-button" onclick="location.href='./routes/destination.html'" class="main-container-action-button">EXPLORE</button>
+            <!-- Contenido de informacion -->
+            <div class="main-container-destination-slide">
+                <!-- Imagen -->
+                <div class="main-container-destination-slide-image">
+                    <img src="../assets/General/image-moon.png" alt="">
+                </div>
+
+                <!-- Contenedor de ifnromacion de imagen -->
+                <div class="main-container-destination-action">
+                    <div class="main-container-destination-action-tabs">
+
+                        <!-- Opciones de tabs -->
+                        <ul class="main-container-destination-action-tabs-list">
+
+                            <!-- OPCION 1 - MOON -->
+                            <div class="menu-destination-box">
+                                <li class="main-container-destination-action-tabs-list-item">
+                                    <a class="main-container-destination-action-tabs-list-link" href="#">
+                                        <span>MOON</span>
+                                    </a>
+                                </li>
+                                <span></span>
+                            </div>
+
+                            <!-- OPCION 2 - MARS -->
+                            <div class="menu-destination-box">
+                                <li class="main-container-destination-action-tabs-list-item">
+                                    <a class="main-container-destination-action-tabs-list-link" href="#">
+                                        <span>MARS</span>
+                                    </a>
+                                </li>
+                                <span></span>
+                            </div>
+
+                            <!-- OPCION 3 - EUROPA -->
+                            <div class="menu-destination-box">
+                                <li class="main-container-destination-action-tabs-list-item">
+                                    <a class="main-container-destination-action-tabs-list-link" href="#">
+                                        <span>EUROPA</span>
+                                    </a>
+                                </li>
+                                <span></span>
+                            </div>
+                            
+                            <!-- OPCION 4 - TITAN -->
+                            <div class="menu-destination-box">
+                                <li class="main-container-destination-action-tabs-list-item">
+                                    <a class="main-container-destination-action-tabs-list-link" href="#">
+                                        <span>TITAN</span>
+                                    </a>
+                                </li>
+                                <span></span>
+                            </div>
+                        </ul>
+                    </div>
+                    <!-- Informacion del astro -->
+                    <div class="main-container-destination-action-slide-planet">
+                        <Strong>MOON</Strong>
+                        <p>
+                            See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.
+                        </p>
+                        <div class="main-container-destinations-action-slide-planet-info">
+                            <div class="main-container-destination-action-slide-planet-info-date1">
+                                <span>AVG. DISTANCE</span>
+                                384,400 KM
+                            </div>
+                            <div class="main-container-destination-action-slide-planet-info-date2">
+                                <span>EST. TRAVEL TIME</span>
+                                3 DAYS
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -4,13 +4,74 @@
 
 // Estilos de contenedor principal
 .main-container-destination{
-    position: relative;
+    border: 3px solid red;
     width: 80%;
     margin: auto;
-    height: 82vh;
-    display: grid;
-    grid-template: 
-    "main-container-description main-container-action" auto/
-    40% 60%;
-    border: 3px solid red;
+
+    &-slide{
+        position: relative;
+        height: 75vh;
+        display: grid;
+        grid-template: 
+        "main-container-destination-tabs-image main-container-destination-action" auto/
+        50% 50%;
+        border: 3px solid blue;
+
+        &-image{
+            grid-area: main-container-destination-tabs-image;
+            position: relative;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+            border: 3px solid yellow;
+        }
+    }
+
+    &-action{
+        grid-area: main-container-destination-action;
+        position: relative;
+        width: 80%;
+        margin: auto;
+        height: auto;
+        border: 3px solid green;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: flex-start;
+
+        &-tabs{
+            position: relative;
+            border: 2px solid white;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+            
+            &-list{
+                position: relative;
+                list-style: none;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: flex-start;
+                align-items: flex-start;
+                border: 3px solid brown;
+
+                &-item{
+                    position: relative;
+                    height: 50px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                
+                &-link{
+                    position: relative;
+                    padding: 0px 25px;
+                    color: var(--colorBlanco);
+                    text-decoration: none;
+                }
+            }
+        }
+    }
 }
