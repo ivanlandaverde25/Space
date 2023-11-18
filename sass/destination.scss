@@ -42,36 +42,80 @@
 
         &-tabs{
             position: relative;
-            border: 2px solid white;
             display: flex;
             flex-flow: column nowrap;
             justify-content: flex-start;
             align-items: flex-start;
-            
-            &-list{
-                position: relative;
-                list-style: none;
-                display: flex;
-                flex-flow: row nowrap;
-                justify-content: flex-start;
-                align-items: flex-start;
-                border: 3px solid brown;
+        }
+    }
+}
 
-                &-item{
-                    position: relative;
-                    height: 50px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                }
-                
-                &-link{
-                    position: relative;
-                    padding: 0px 25px;
-                    color: var(--colorBlanco);
-                    text-decoration: none;
-                }
-            }
+.menu-destination{
+    position: relative;
+    list-style: none;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    &-box{
+        position: relative;
+        overflow: hidden;
+        padding: 5px 0px;
+    
+        &:hover .menu-destination-box-hover{
+            left: 24%;
+        }
+
+        &-item{
+            position: relative;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            
+        }
+    
+        &-link{
+            position: relative;
+            padding: 10px 25px;
+            text-decoration: none;
+            letter-spacing: 2px;
+        }
+
+        &-text{
+            font-size: 1.2em;
+        }
+
+        &-text-active{
+            color: var(--colorBlanco);
+        }
+
+        &-text-hover{
+            color: var(--colorBlanco500);
+        }
+
+        &-active{
+            display: block;
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            background-color: var(--colorBlanco);
+            bottom: 0%;
+            left: 24%;
+            transition: 0.4s all ease;
+        }
+
+        &-hover{
+            display: block;
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            background-color: var(--colorBlanco500);
+            bottom: 0%;
+            left: -50%;
+            transition: 0.4s all ease;
         }
     }
 }
