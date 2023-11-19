@@ -6,7 +6,7 @@
 .main-container-destination{
     width: 80%;
     margin: auto;
-    border: 3px solid red;
+    // border: 3px solid red;
 
     &-slide{
         position: relative;
@@ -21,7 +21,7 @@
             position: relative;
             display: inline-block;
             overflow: hidden;
-            border: 3px solid yellow;
+            // border: 3px solid yellow;
             display: flex;
             justify-content: center;
             align-content: center;
@@ -34,7 +34,7 @@
         width: 80%;
         margin: auto;
         height: auto;
-        border: 3px solid green;
+        // border: 3px solid green;
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
@@ -121,12 +121,42 @@
 }
 
 .slide{
-    border: 2px solid cyan;
+    // border: 2px solid cyan;
     position: relative;
     transition: .8s all ease-in-out;
     width: 100%;
-    float: inline-start;
+    // display: flex;
+    // justify-content: flex-start;
+    // align-items: center;
+    // align-content: center;
+
+    &-item{
+        position: relative;
+        overflow: hidden;
+        // display: inline-flex;
+        // flex-flow: row nowrap;
+        // justify-content: center;
+        // align-items: center;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+    }
     
+    &-destination-image{
+        // border: 2px solid blue;
+        display: inline-flex;
+        width: 100%;
+        height: 100%;
+        object-fit: none;
+        position: relative;
+        transition: .8s all ease-in-out;
+    
+        &:hover{
+            transform: scale(1.06);
+        }
+    }
+
+    // Clases para mover el Slide
     &-move0{
         transform: translateY(0%);
     }
@@ -142,28 +172,35 @@
     &-move300{
         transform: translateY(-300%);
     }
+}
 
-    &-item{
+// Detalles de cada astro
+.container-info-star{
+    position: relative;
+    // border: 2px solid red;
+
+    &-item-description{
         position: relative;
-        overflow: hidden;
-        display: inline-flex;
-        flex-flow: row nowrap;
-        justify-content: center;
+        font-size: 1.3em;
+        line-height: 40px;
+        margin: 0px 0px 45px 0px;
+    }
+
+    &-detail{
+        // border: 2px solid white;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
         align-items: center;
-        width: 100%;
-        height: 100%;
+        border-top: 1.5px solid var(--colorBlanco500);
+        padding-top: 2em;
     }
 }
 
-.destination-image{
-    border: 2px solid blue;
-    width: 100%;
-    height: 100%;
-    object-fit: none;
-    position: relative;
-    transition: .8s all ease-in-out;
+.d-block{
+    display: block;
+}
 
-    &:hover{
-        transform: scale(1.06);
-    }
+.m-top10{
+    margin-top: 10px;
 }

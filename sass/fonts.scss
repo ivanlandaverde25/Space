@@ -37,6 +37,10 @@
     font-size: 1.8em;
 }
 
+.sub-titulo1{
+    font-size: 2em;
+}
+
 // PARRAFOS
 .texto1{
     font-size: 1.5em;
@@ -58,4 +62,13 @@
 
 .minuscula{
     text-transform: lowercase;
+}
+
+// Espaciados de letras
+.spacing2{
+    letter-spacing: 2px;
+}
+
+.spacing5{
+    letter-spacing: 5px;
 }
