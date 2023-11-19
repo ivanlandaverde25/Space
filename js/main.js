@@ -24,6 +24,8 @@ window.addEventListener('DOMContentLoaded', () => {
     let hoverTitan = document.getElementById('hoverTitan');
     let textTitan = document.getElementById('textTitan');
 
+    let valorActivo = 0;
+
     // Slide de imagenes
     slideImageDestination = document.getElementById('main-container-destination-slide-image');
     slideDestination = document.getElementById('slide');
@@ -50,11 +52,26 @@ window.addEventListener('DOMContentLoaded', () => {
         text.classList.add("menu-destination-box-text-hover");
     };
 
+    // Funcion para eliminar valores de clases del slide
+    const sliderRemoveClass = (val1, val2, val3, val4) => {
+        if (valorActivo == val1 ){
+            slideDestination.classList.remove("slide-move0");
+        } else if (valorActivo == val2 ){
+            slideDestination.classList.remove("slide-move100");
+        } else if (valorActivo == val3 ){
+            slideDestination.classList.remove("slide-move200");
+        } else if (valorActivo == val4 ){
+            slideDestination.classList.remove("slide-move300");
+        }
+    };
+
     if ( menuMoon ){
         menuMoon.addEventListener('click', () => {
-            
-            // Mover imagen de Mars
-            slideDestination.classList.remove("slide-move100");
+
+            sliderRemoveClass(0,1,2,3);
+            slideDestination.classList.add("slide-move0");
+            valorActivo = 0;
+
             // Agregar efectos a Moon
             agergarEfectos(hoverMoon, textMoon);
 
@@ -65,15 +82,16 @@ window.addEventListener('DOMContentLoaded', () => {
             eliminarEfectos(hoverEuropa, textEuropa);
             // Titan
             eliminarEfectos(hoverTitan, textTitan);
-
         });
     }
     
     if ( menuMars ){
         menuMars.addEventListener('click', () => {
             
-            // Mover imagen de Mars
+            sliderRemoveClass(0,1,2,3);
             slideDestination.classList.add("slide-move100");
+            valorActivo = 1;
+
             // Agregando elemento a Mars
             agergarEfectos(hoverMars, textMars);
             
@@ -87,8 +105,12 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     }
     
-    if (menuEuropa){
+    if ( menuEuropa ){
         menuEuropa.addEventListener('click', () => {
+            
+            sliderRemoveClass(0,1,2,3);
+            slideDestination.classList.add("slide-move200");
+            valorActivo = 2;
             // Agregando elemento a Europa
             agergarEfectos(hoverEuropa, textEuropa);
             
@@ -99,12 +121,16 @@ window.addEventListener('DOMContentLoaded', () => {
             eliminarEfectos(hoverMars, textMars);
             // Titan
             eliminarEfectos(hoverTitan, textTitan);
-
+            
         });
     }
-
-    if (menuTitan){
+    
+    if ( menuTitan ){
         menuTitan.addEventListener('click', () => {
+
+            sliderRemoveClass(0,1,2,3);
+            slideDestination.classList.add("slide-move300");
+            valorActivo = 3;
             // Agregando elemento a Titan
             agergarEfectos(hoverTitan, textTitan);
             
