@@ -220,25 +220,25 @@ body {
 }
 
 .main-container-destination {
-  border: 3px solid red;
   width: 80%;
   margin: auto;
+  border: 3px solid red;
 }
 .main-container-destination-slide {
   position: relative;
   height: 75vh;
   display: grid;
   grid-template: "main-container-destination-tabs-image main-container-destination-action" auto/50% 50%;
-  border: 3px solid blue;
 }
 .main-container-destination-slide-image {
   grid-area: main-container-destination-tabs-image;
   position: relative;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
+  display: inline-block;
+  overflow: hidden;
   border: 3px solid yellow;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 .main-container-destination-action {
   grid-area: main-container-destination-action;
@@ -274,7 +274,7 @@ body {
   padding: 5px 0px;
 }
 .menu-destination-box:hover .menu-destination-box-hover {
-  left: 24%;
+  left: 25%;
 }
 .menu-destination-box-item {
   position: relative;
@@ -317,6 +317,30 @@ body {
   bottom: 0%;
   left: -50%;
   transition: 0.4s all ease;
+}
+
+.slide {
+  border: 2px solid cyan;
+  display: flex;
+  flex-flow: row nowrap;
+  transform: translateX(0);
+  position: relative;
+  transform: translateX(0px);
+  transition: 0.8s all ease-in-out;
+}
+.slide-remove100 {
+  transform: translateX(100%);
+}
+.slide-move100 {
+  transform: translateX(-100%);
+}
+
+.destination-image {
+  border: 2px solid blue;
+  width: 100%;
+  height: 100%;
+  object-fit: none;
+  position: relative;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -8,7 +8,6 @@ window.addEventListener('DOMContentLoaded', () => {
     let menuMoon = document.getElementById('menuMoon');
     let hoverMoon = document.getElementById('hoverMoon');
     let textMoon = document.getElementById('textMoon');
-    let clickMoon = 0;
 
     // Mars
     let menuMars = document.getElementById('menuMars');
@@ -25,16 +24,22 @@ window.addEventListener('DOMContentLoaded', () => {
     let hoverTitan = document.getElementById('hoverTitan');
     let textTitan = document.getElementById('textTitan');
 
+    // Slide de imagenes
+    slideImageDestination = document.getElementById('main-container-destination-slide-image');
+    slideDestination = document.getElementById('slide');
+
+    // Funcion para agregar efectos a los tabs de destination
     const agergarEfectos = (hover, text) => {
         // Agregar acción de hover
         hover.classList.remove("menu-destination-box-hover");
         hover.classList.add("menu-destination-box-active");
-            
+        
         // Agregar cambio en texto
         text.classList.remove("menu-destination-box-text-hover");
         text.classList.add("menu-destination-box-text-active");
     };
-
+    
+    // Funcion para eliminar efectos a los tabs de destination
     const eliminarEfectos = (hover, text) => {
         // Eliminar acción de hover
         hover.classList.remove("menu-destination-box-active");
@@ -47,6 +52,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
     if ( menuMoon ){
         menuMoon.addEventListener('click', () => {
+            
+            // Mover imagen de Mars
+            slideDestination.classList.remove("slide-move100");
             // Agregar efectos a Moon
             agergarEfectos(hoverMoon, textMoon);
 
@@ -57,11 +65,15 @@ window.addEventListener('DOMContentLoaded', () => {
             eliminarEfectos(hoverEuropa, textEuropa);
             // Titan
             eliminarEfectos(hoverTitan, textTitan);
+
         });
     }
-
+    
     if ( menuMars ){
         menuMars.addEventListener('click', () => {
+            
+            // Mover imagen de Mars
+            slideDestination.classList.add("slide-move100");
             // Agregando elemento a Mars
             agergarEfectos(hoverMars, textMars);
             
