@@ -1,0 +1,80 @@
+// Estilos de la vista Crew
+.container-image-crew{
+    @include bg-image("../assets/Desktop/background-crew-desktop.jpg");
+}
+
+.main-container-crew{
+    width: 80%;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    // border: 3px solid red;
+
+    &-slide{
+        position: relative;
+        height: 80vh;
+        margin: auto;
+        overflow: hidden;
+        display: grid;
+        grid-template: 
+        "main-container-crew-slide-info main-container-crew-slide-image" auto/
+        50% 50%;
+        // border: 5px solid orange;
+
+        &-info{
+            grid-area: main-container-crew-slide-info;
+            position: relative;
+            display: inline-block;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            overflow: hidden;
+            // border: 3px solid white;
+        }
+
+        &-image{
+            grid-area: main-container-crew-slide-image;
+            position: relative;
+            min-height: 100%;
+            min-width: 100%;
+            // border: 3px solid cyan;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            overflow: hidden;
+        }
+    }
+
+    &-box-image{
+        border: 3px solid orange;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: flex-end;
+        
+        &-item{
+            position: relative;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            // border: 3px solid green;
+            min-width: 100%;
+            transform: translateX(0%);
+        }
+    }
+}
+
+.image-slide-item{
+    object-fit: cover;
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    border: 2px solid white;
+}
+
+.container-boxing{
+    border: 3px solid blue;
+    height: 100%;
+}
