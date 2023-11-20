@@ -13,7 +13,7 @@ window.addEventListener('DOMContentLoaded', () => {
     let menuMars = document.getElementById('menuMars');
     let hoverMars = document.getElementById('hoverMars');
     let textMars = document.getElementById('textMars');
-    
+        
     // Europa
     let menuEuropa = document.getElementById('menuEuropa');
     let hoverEuropa = document.getElementById('hoverEuropa');
@@ -30,8 +30,11 @@ window.addEventListener('DOMContentLoaded', () => {
     slideImageDestination = document.getElementById('main-container-destination-slide-image');
     slideDestination = document.getElementById('slide');
 
+    // Slide de información
+    slideInfoStar = document.getElementById('slide-info-star');
+
     // Funcion para agregar efectos a los tabs de destination
-    const agergarEfectos = (hover, text) => {
+    const agergarEfectos = ( hover, text ) => {
         // Agregar acción de hover
         hover.classList.remove("menu-destination-box-hover");
         hover.classList.add("menu-destination-box-active");
@@ -42,7 +45,7 @@ window.addEventListener('DOMContentLoaded', () => {
     };
     
     // Funcion para eliminar efectos a los tabs de destination
-    const eliminarEfectos = (hover, text) => {
+    const eliminarEfectos = ( hover, text ) => {
         // Eliminar acción de hover
         hover.classList.remove("menu-destination-box-active");
         hover.classList.add("menu-destination-box-hover");
@@ -53,15 +56,19 @@ window.addEventListener('DOMContentLoaded', () => {
     };
 
     // Funcion para eliminar valores de clases del slide
-    const sliderRemoveClass = (val1, val2, val3, val4) => {
+    const sliderRemoveClass = ( val1, val2, val3, val4 ) => {
         if (valorActivo == val1 ){
             slideDestination.classList.remove("slide-move0");
+            slideInfoStar.classList.remove("slide-move0"); //
         } else if (valorActivo == val2 ){
             slideDestination.classList.remove("slide-move100");
+            slideInfoStar.classList.remove("slide-move100"); //
         } else if (valorActivo == val3 ){
             slideDestination.classList.remove("slide-move200");
+            slideInfoStar.classList.remove("slide-move200"); //
         } else if (valorActivo == val4 ){
             slideDestination.classList.remove("slide-move300");
+            slideInfoStar.classList.remove("slide-move300"); //
         }
     };
 
@@ -70,6 +77,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
             sliderRemoveClass(0,1,2,3);
             slideDestination.classList.add("slide-move0");
+            slideInfoStar.classList.add("slide-move0");
             valorActivo = 0;
 
             // Agregar efectos a Moon
@@ -90,6 +98,7 @@ window.addEventListener('DOMContentLoaded', () => {
             
             sliderRemoveClass(0,1,2,3);
             slideDestination.classList.add("slide-move100");
+            slideInfoStar.classList.add("slide-move100");
             valorActivo = 1;
 
             // Agregando elemento a Mars
@@ -110,6 +119,7 @@ window.addEventListener('DOMContentLoaded', () => {
             
             sliderRemoveClass(0,1,2,3);
             slideDestination.classList.add("slide-move200");
+            slideInfoStar.classList.add("slide-move200");
             valorActivo = 2;
             // Agregando elemento a Europa
             agergarEfectos(hoverEuropa, textEuropa);
@@ -130,6 +140,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
             sliderRemoveClass(0,1,2,3);
             slideDestination.classList.add("slide-move300");
+            slideInfoStar.classList.add("slide-move300");
             valorActivo = 3;
             // Agregando elemento a Titan
             agergarEfectos(hoverTitan, textTitan);
