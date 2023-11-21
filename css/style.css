@@ -64,8 +64,20 @@ body {
   font-size: 6em;
 }
 
+.titulo4 {
+  font-size: 3em;
+}
+
+.titulo5 {
+  font-size: 5em;
+}
+
 .sub-titulo1 {
   font-size: 2em;
+}
+
+.sub-titulo2 {
+  font-size: 1.4em;
 }
 
 .texto1 {
@@ -94,6 +106,10 @@ body {
 
 .spacing5 {
   letter-spacing: 5px;
+}
+
+.line-height40 {
+  line-height: 40px;
 }
 
 .container-menu {
@@ -177,7 +193,7 @@ body {
   position: absolute;
   width: 50%;
   height: 3px;
-  background-color: var(--colorBlanco);
+  background-color: var(--colorBlanco500);
   bottom: 0%;
   left: -50%;
   transition: 0.4s all ease;
@@ -420,6 +436,10 @@ body {
   margin-top: 5px;
 }
 
+.m-top10 {
+  margin-top: 10px;
+}
+
 .container-image-crew {
   background: url(../assets/Desktop/background-crew-desktop.jpg) no-repeat center/cover;
 }
@@ -429,6 +449,38 @@ body {
   margin: auto;
   position: relative;
   overflow: hidden;
+}
+.main-container-crew-slide-info {
+  border: 3px solid red;
+}
+.main-container-crew-box-info {
+  border: 3px solid cyan;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 10%;
+  width: 100%;
+}
+.main-container-crew-box-item {
+  border: 3px solid orange;
+}
+.main-container-crew-general-info {
+  border: 3px solid white;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.main-container-crew-options-link {
+  border: 3px solid brown;
+  width: 100%;
+}
+.main-container-crew-options-link-item {
+  min-width: 50px;
+  min-height: 50px;
+  border-radius: 50%;
+  background-color: white;
 }
 .main-container-crew-slide {
   position: relative;

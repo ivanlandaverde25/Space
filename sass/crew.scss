@@ -10,6 +10,46 @@
     overflow: hidden;
     // border: 3px solid red;
 
+    &-slide-info{
+        border: 3px solid red;
+    }
+    
+    &-box-info{
+        border: 3px solid cyan;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 10%;
+        width: 100%;
+    }   
+    
+    &-box-item{
+        border: 3px solid orange;
+    }
+    
+    &-general-info{
+        border: 3px solid white;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &-options-link{
+        border: 3px solid brown;
+        width: 100%;
+
+        &-item{
+            min-width: 50px;
+            min-height: 50px;
+            border-radius: 50%;
+            background-color: white;
+        }
+    }
+
+
+    // Detalles del Slide
     &-slide{
         position: relative;
         height: 80vh;
