@@ -477,10 +477,10 @@ body {
   width: 100%;
 }
 .main-container-crew-options-link-item {
-  min-width: 50px;
-  min-height: 50px;
+  padding: 0px 10px;
   border-radius: 50%;
   background-color: white;
+  margin-right: 10px;
 }
 .main-container-crew-slide {
   position: relative;
@@ -514,7 +514,8 @@ body {
   position: relative;
   overflow: hidden;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+  height: 100%;
 }
 .main-container-crew-box-image-item {
   position: relative;
@@ -538,6 +539,9 @@ body {
 .container-boxing {
   border: 3px solid blue;
   height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
 /*# sourceMappingURL=style.css.map */

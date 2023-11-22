@@ -41,10 +41,10 @@
         width: 100%;
 
         &-item{
-            min-width: 50px;
-            min-height: 50px;
+            padding: 0px 10px;
             border-radius: 50%;
             background-color: white;
+            margin-right: 10px;
         }
     }
 
@@ -90,7 +90,8 @@
         position: relative;
         overflow: hidden;
         display: flex;
-        align-items: flex-end;
+        align-items: center;
+        height: 100%;
         
         &-item{
             position: relative;
@@ -102,6 +103,7 @@
             // border: 3px solid green;
             min-width: 100%;
             transform: translateX(0%);
+            // transform: translateX(-200px);
         }
     }
 }
@@ -117,4 +119,7 @@
 .container-boxing{
     border: 3px solid blue;
     height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
