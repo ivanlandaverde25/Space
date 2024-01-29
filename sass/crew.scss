@@ -8,42 +8,34 @@
     margin: auto;
     position: relative;
     overflow: hidden;
-    // border: 3px solid red;
-
-    &-slide-info{
-        // border: 3px solid red;
-    }
     
     &-general-info{
-        // border: 3px solid white;
         display: flex;
         flex-flow: column nowrap;
         justify-content: space-around;
-        align-items: center;
+        align-items: flex-start;
         min-width: 100%;
     }
 
         
     &-box-info{
-        // border: 3px solid cyan;
         position: relative;
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        padding-right: 10%;
         width: 100%;
         overflow: hidden;
     }
     
     &-box-item{
-        // border: 3px solid orange;
-        min-width: 85vh;
+        min-width: 100%;
         height: 100%;
-        // transform: translateX(-200px);
+        // transform: translateX(0%);
     }
 
     &-options-link{
-        width: 100%;
+        min-width: 100%;
+        min-height: 10vh;
 
         &-item{
             min-width: 15px;
@@ -55,7 +47,6 @@
         }
     }
 
-
     // Detalles del Slide
     &-slide{
         position: relative;
@@ -66,7 +57,6 @@
         grid-template: 
         "main-container-crew-slide-info main-container-crew-slide-image" auto/
         50% 50%;
-        // border: 5px solid orange;
 
         &-info{
             grid-area: main-container-crew-slide-info;
@@ -76,7 +66,6 @@
             justify-content: center;
             align-content: center;
             overflow: hidden;
-            // border: 3px solid white;
         }
 
         &-image{
@@ -84,7 +73,6 @@
             position: relative;
             min-height: 100%;
             min-width: 100%;
-            // border: 3px solid cyan;
             display: flex;
             justify-content: center;
             align-items: flex-end;
@@ -93,11 +81,10 @@
     }
 
     &-box-image{
-        // border: 3px solid orange;
         position: relative;
         overflow: hidden;
         display: flex;
-        align-items: center;
+        justify-content: flex-start;
         height: 100%;
         display: flex;
         align-items: flex-end;
@@ -105,12 +92,9 @@
         &-item{
             position: relative;
             display: flex;
-            flex-flow: row nowrap;
-            justify-content: flex-end;
-            align-items: flex-end;
             overflow: hidden;
             min-width: 100%;
-            // transform: translateX(-200px);
+            transform: translateX(0%);
         }
     }
 }

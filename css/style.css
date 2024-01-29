@@ -72,6 +72,10 @@ body {
   font-size: 5em;
 }
 
+.titulo6 {
+  font-size: 2.5em;
+}
+
 .sub-titulo1 {
   font-size: 2em;
 }
@@ -454,7 +458,7 @@ body {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
   min-width: 100%;
 }
 .main-container-crew-box-info {
@@ -462,16 +466,16 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding-right: 10%;
   width: 100%;
   overflow: hidden;
 }
 .main-container-crew-box-item {
-  min-width: 85vh;
+  min-width: 100%;
   height: 100%;
 }
 .main-container-crew-options-link {
-  width: 100%;
+  min-width: 100%;
+  min-height: 10vh;
 }
 .main-container-crew-options-link-item {
   min-width: 15px;
@@ -512,7 +516,7 @@ body {
   position: relative;
   overflow: hidden;
   display: flex;
-  align-items: center;
+  justify-content: flex-start;
   height: 100%;
   display: flex;
   align-items: flex-end;
@@ -520,11 +524,9 @@ body {
 .main-container-crew-box-image-item {
   position: relative;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-end;
-  align-items: flex-end;
   overflow: hidden;
   min-width: 100%;
+  transform: translateX(0%);
 }
 
 .image-slide-item {

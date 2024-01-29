@@ -1,4 +1,5 @@
 window.addEventListener('DOMContentLoaded', () => {
+
     let container = document.querySelector('.container');
     let botonHome = document.getElementById('boton-home');
     let botonDestination = document.getElementById('boton-destination');
@@ -155,5 +156,82 @@ window.addEventListener('DOMContentLoaded', () => {
 
         });
     }
+
+
+    // FUNCIONES DE LA VISTA CREW
+
+    // DOUGLAS HURLEY
+    const itemCrewDouglas = document.getElementById('itemCrewDouglas');
+
+    // Opciones de paso de slide
+    const itemCrew1 = document.getElementById('itemCrew1');
+    const itemCrew2 = document.getElementById('itemCrew2');
+    const itemCrew3 = document.getElementById('itemCrew3');
+    const itemCrew4 = document.getElementById('itemCrew4');
+    valorActivoSlideCrew = 0;
+
+    // Funcion para eliminar valores de clases del slide
+    const sliderRemoveClassCrew = ( val1, val2, val3, val4 ) => {
+        if (valorActivo == val1 ){
+            itemCrewDouglas.classList.remove("slide-move0");
+            // slideInfoStar.classList.remove("slide-move0"); //
+        } else if (valorActivo == val2 ){
+            itemCrewDouglas.classList.remove("slide-move100");
+            // slideInfoStar.classList.remove("slide-move100"); //
+        } else if (valorActivo == val3 ){
+            itemCrewDouglas.classList.remove("slide-move200");
+            // slideInfoStar.classList.remove("slide-move200"); //
+        } else if (valorActivo == val4 ){
+            itemCrewDouglas.classList.remove("slide-move300");
+            // slideInfoStar.classList.remove("slide-move300"); //
+        }
+    };
+
+
+
+
+
+    // Opcion de slide 1
+    if ( itemCrew1 ){
+        itemCrew1.addEventListener('click', () => {
+            console.log("first")
+            sliderRemoveClassCrew(0,1,2,3);
+            itemCrewDouglas.classList.add("slide-move0");
+            valorActivoSlideCrew = 0;
+        });
+    }
+
+    // Opcion de slide 2
+    if ( itemCrew2 ){
+        itemCrew2.addEventListener('click', () => {
+            console.log("first2")
+            sliderRemoveClassCrew(0,1,2,3);
+            itemCrewDouglas.classList.add("slide-move100");
+            valorActivoSlideCrew = 1;
+        });
+    }
+
+    // Opcion de slide 3
+    if ( itemCrew3 ){
+        itemCrew3.addEventListener('click', () => {
+            console.log("first3")
+            sliderRemoveClassCrew(0,1,2,3);
+            itemCrewDouglas.classList.add("slide-move200");
+            valorActivoSlideCrew = 2;
+        });
+    }
+
+    // Opcion de slide 4
+    if ( itemCrew4 ){
+        itemCrew4.addEventListener('click', () => {
+            console.log("first4")
+            sliderRemoveClassCrew(0,1,2,3);
+            itemCrewDouglas.classList.add("slide-move300");
+            valorActivoSlideCrew = 3;
+        });
+    }
+
+
+    console.log(itemCrewDouglas);
 
 });
