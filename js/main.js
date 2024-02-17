@@ -160,8 +160,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // FUNCIONES DE LA VISTA CREW
 
-    // DOUGLAS HURLEY
-    const itemCrewDouglas = document.getElementById('itemCrewDouglas');
+    // INFO
+    const itemCrewInfo = document.getElementById('itemCrewInfo');
+    
+    // IMAGE
+    const itemCrewImage = document.getElementById('itemCrewImage');
 
     // Opciones de paso de slide
     const itemCrew1 = document.getElementById('itemCrew1');
@@ -173,21 +176,45 @@ window.addEventListener('DOMContentLoaded', () => {
     // Funcion para eliminar valores de clases del slide
     const sliderRemoveClassCrew = ( val1, val2, val3, val4 ) => {
         if (valorActivo == val1 ){
-            itemCrewDouglas.classList.remove("slide-move0");
-            // slideInfoStar.classList.remove("slide-move0"); //
+            itemCrewInfo.classList.remove("move0");
+            itemCrewImage.classList.remove("move0");
+            // slideInfoStar.classList.remove("move0"); //
         } else if (valorActivo == val2 ){
-            itemCrewDouglas.classList.remove("slide-move100");
-            // slideInfoStar.classList.remove("slide-move100"); //
+            itemCrewInfo.classList.remove("move100");
+            itemCrewImage.classList.remove("move100");
+            // slideInfoStar.classList.remove("move100"); //
         } else if (valorActivo == val3 ){
-            itemCrewDouglas.classList.remove("slide-move200");
-            // slideInfoStar.classList.remove("slide-move200"); //
+            itemCrewInfo.classList.remove("move200");
+            itemCrewImage.classList.remove("move200");
+            // slideInfoStar.classList.remove("move200"); //
         } else if (valorActivo == val4 ){
-            itemCrewDouglas.classList.remove("slide-move300");
-            // slideInfoStar.classList.remove("slide-move300"); //
+            itemCrewInfo.classList.remove("move300");
+            itemCrewImage.classList.remove("move300");
+            // slideInfoStar.classList.remove("move300"); //
         }
     };
 
-
+    // Funcion para agregar efectos a los tabs de destination
+    const agergarEfectosCrew = ( hover, text ) => {
+        // Agregar acción de hover
+        hover.classList.remove("menu-destination-box-hover");
+        hover.classList.add("menu-destination-box-active");
+        
+        // Agregar cambio en texto
+        text.classList.remove("menu-destination-box-text-hover");
+        text.classList.add("menu-destination-box-text-active");
+    };
+    
+    // Funcion para eliminar efectos a los tabs de destination
+    const eliminarEfectosCrew = ( hover, text ) => {
+        // Eliminar acción de hover
+        hover.classList.remove("menu-destination-box-active");
+        hover.classList.add("menu-destination-box-hover");
+        
+        // Eliminar cambio de texto
+        text.classList.remove("menu-destination-box-text-active");
+        text.classList.add("menu-destination-box-text-hover");
+    };
 
 
 
@@ -196,7 +223,8 @@ window.addEventListener('DOMContentLoaded', () => {
         itemCrew1.addEventListener('click', () => {
             console.log("first")
             sliderRemoveClassCrew(0,1,2,3);
-            itemCrewDouglas.classList.add("slide-move0");
+            itemCrewInfo.classList.add("move0");
+            itemCrewImage.classList.add("move0");
             valorActivoSlideCrew = 0;
         });
     }
@@ -206,7 +234,8 @@ window.addEventListener('DOMContentLoaded', () => {
         itemCrew2.addEventListener('click', () => {
             console.log("first2")
             sliderRemoveClassCrew(0,1,2,3);
-            itemCrewDouglas.classList.add("slide-move100");
+            itemCrewInfo.classList.add("move100");
+            itemCrewImage.classList.add("move100");
             valorActivoSlideCrew = 1;
         });
     }
@@ -216,7 +245,8 @@ window.addEventListener('DOMContentLoaded', () => {
         itemCrew3.addEventListener('click', () => {
             console.log("first3")
             sliderRemoveClassCrew(0,1,2,3);
-            itemCrewDouglas.classList.add("slide-move200");
+            itemCrewInfo.classList.add("move200");
+            itemCrewImage.classList.add("move200");
             valorActivoSlideCrew = 2;
         });
     }
@@ -226,12 +256,9 @@ window.addEventListener('DOMContentLoaded', () => {
         itemCrew4.addEventListener('click', () => {
             console.log("first4")
             sliderRemoveClassCrew(0,1,2,3);
-            itemCrewDouglas.classList.add("slide-move300");
+            itemCrewInfo.classList.add("move300");
+            itemCrewImage.classList.add("move300");
             valorActivoSlideCrew = 3;
         });
     }
-
-
-    console.log(itemCrewDouglas);
-
 });
