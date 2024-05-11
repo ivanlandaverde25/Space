@@ -160,6 +160,7 @@ body {
   display: flex;
   flex-flow: row wrap;
   height: 100px;
+  outline: none;
 }
 .menu-list-box {
   position: relative;
@@ -167,6 +168,7 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  outline: none;
 }
 .menu-list-box:hover .menu-list-item-link-hover {
   left: 25%;
@@ -177,6 +179,7 @@ body {
   justify-content: center;
   height: auto;
   list-style-type: none;
+  outline: none;
 }
 .menu-list-item-link {
   position: relative;
@@ -192,6 +195,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  outline: none;
 }
 .menu-list-item-link-active {
   display: block;
@@ -537,6 +541,7 @@ body {
   display: flex;
   overflow: hidden;
   min-width: 100%;
+  justify-content: flex-end;
 }
 
 .image-slide-item {
@@ -613,7 +618,12 @@ body {
 }
 .technology-slide-image {
   grid-area: technology-slide-image;
-  border: 2px solid green;
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-end;
+  overflow-y: hidden;
 }
 
 .button-technology {
@@ -661,6 +671,31 @@ body {
 .technology-slide-info-container {
   transition: 0.9s 0.1s all;
   height: 100%;
+}
+
+.technology-slide-image-container {
+  transition: 0.9s 0.1s all;
+  height: 100%;
+  transform: translateY(0%);
+}
+
+.slide-image-item {
+  min-height: 100%;
+  margin: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 10px;
+}
+.slide-image-item-0 {
+  transform: translateY(0%);
+}
+.slide-image-item-100 {
+  transform: translateY(-100%);
+}
+.slide-image-item-200 {
+  transform: translateY(-200%);
 }
 
 /*# sourceMappingURL=style.css.map */

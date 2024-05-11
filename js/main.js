@@ -171,94 +171,120 @@ window.addEventListener('DOMContentLoaded', () => {
     const itemCrew2 = document.getElementById('itemCrew2');
     const itemCrew3 = document.getElementById('itemCrew3');
     const itemCrew4 = document.getElementById('itemCrew4');
-    valorActivoSlideCrew = 0;
-
-    // Funcion para eliminar valores de clases del slide
-    const sliderRemoveClassCrew = ( val1, val2, val3, val4 ) => {
-        if (valorActivo == val1 ){
-            itemCrewInfo.classList.remove("move0");
-            itemCrewImage.classList.remove("move0");
-            // slideInfoStar.classList.remove("move0"); //
-        } else if (valorActivo == val2 ){
-            itemCrewInfo.classList.remove("move100");
-            itemCrewImage.classList.remove("move100");
-            // slideInfoStar.classList.remove("move100"); //
-        } else if (valorActivo == val3 ){
-            itemCrewInfo.classList.remove("move200");
-            itemCrewImage.classList.remove("move200");
-            // slideInfoStar.classList.remove("move200"); //
-        } else if (valorActivo == val4 ){
-            itemCrewInfo.classList.remove("move300");
-            itemCrewImage.classList.remove("move300");
-            // slideInfoStar.classList.remove("move300"); //
-        }
-    };
-
-    // Funcion para agregar efectos a los tabs de destination
-    const agergarEfectosCrew = ( hover, text ) => {
-        // Agregar acción de hover
-        hover.classList.remove("menu-destination-box-hover");
-        hover.classList.add("menu-destination-box-active");
-        
-        // Agregar cambio en texto
-        text.classList.remove("menu-destination-box-text-hover");
-        text.classList.add("menu-destination-box-text-active");
-    };
-    
-    // Funcion para eliminar efectos a los tabs de destination
-    const eliminarEfectosCrew = ( hover, text ) => {
-        // Eliminar acción de hover
-        hover.classList.remove("menu-destination-box-active");
-        hover.classList.add("menu-destination-box-hover");
-        
-        // Eliminar cambio de texto
-        text.classList.remove("menu-destination-box-text-active");
-        text.classList.add("menu-destination-box-text-hover");
-    };
-
-
 
     // Opcion de slide 1
     if ( itemCrew1 ){
         itemCrew1.addEventListener('click', () => {
-            console.log("first")
-            sliderRemoveClassCrew(0,1,2,3);
+
+            // Regresar al origen al slide de imagenes
+            itemCrewImage.classList.remove("move100");
+            itemCrewImage.classList.remove("move200");
+            itemCrewImage.classList.remove("move300");
+            
+            // Regresar al origen al slide de informacion
+            itemCrewInfo.classList.remove("move100");
+            itemCrewInfo.classList.remove("move200");
+            itemCrewInfo.classList.remove("move300");
+
+            itemCrew2.classList.remove("crew-option-link-active");
+            itemCrew3.classList.remove("crew-option-link-active");
+            itemCrew4.classList.remove("crew-option-link-active");
+
+            itemCrew2.classList.add("crew-option-link-hover");
+            itemCrew3.classList.add("crew-option-link-hover");
+            itemCrew4.classList.add("crew-option-link-hover");
+
+            // Mover los slide al correcto
             itemCrewInfo.classList.add("move0");
             itemCrewImage.classList.add("move0");
-            valorActivoSlideCrew = 0;
+            itemCrew1.classList.add("crew-option-link-active");
         });
     }
 
     // Opcion de slide 2
     if ( itemCrew2 ){
         itemCrew2.addEventListener('click', () => {
-            console.log("first2")
-            sliderRemoveClassCrew(0,1,2,3);
+
+            // Regresar al origen al slide de imagenes
+            itemCrewImage.classList.remove("move0");
+            itemCrewImage.classList.remove("move200");
+            itemCrewImage.classList.remove("move300");
+
+            // Regresar al origen al slide de informacion
+            itemCrewInfo.classList.remove("move0");
+            itemCrewInfo.classList.remove("move200");
+            itemCrewInfo.classList.remove("move300");
+
+            itemCrew1.classList.remove("crew-option-link-active");
+            itemCrew3.classList.remove("crew-option-link-active");
+            itemCrew4.classList.remove("crew-option-link-active");
+
+            itemCrew1.classList.add("crew-option-link-hover");
+            itemCrew3.classList.add("crew-option-link-hover");
+            itemCrew4.classList.add("crew-option-link-hover");
+
+            // Mover los slide al correcto
             itemCrewInfo.classList.add("move100");
             itemCrewImage.classList.add("move100");
-            valorActivoSlideCrew = 1;
+            itemCrew2.classList.add("crew-option-link-active");
         });
     }
 
     // Opcion de slide 3
     if ( itemCrew3 ){
         itemCrew3.addEventListener('click', () => {
-            console.log("first3")
-            sliderRemoveClassCrew(0,1,2,3);
+
+            // Regresar al origen al slide de imagenes
+            itemCrewImage.classList.remove("move100");
+            itemCrewImage.classList.remove("move0");
+            itemCrewImage.classList.remove("move300");
+            
+            // Regresar al origen al slide de informacion
+            itemCrewInfo.classList.remove("move100");
+            itemCrewInfo.classList.remove("move0");
+            itemCrewInfo.classList.remove("move300");
+
+            itemCrew1.classList.remove("crew-option-link-active");
+            itemCrew2.classList.remove("crew-option-link-active");
+            itemCrew4.classList.remove("crew-option-link-active");
+
+            itemCrew1.classList.add("crew-option-link-hover");
+            itemCrew2.classList.add("crew-option-link-hover");
+            itemCrew4.classList.add("crew-option-link-hover");
+
+            // Mover los slide al correcto
             itemCrewInfo.classList.add("move200");
             itemCrewImage.classList.add("move200");
-            valorActivoSlideCrew = 2;
+            itemCrew3.classList.add("crew-option-link-active");
         });
     }
 
     // Opcion de slide 4
     if ( itemCrew4 ){
         itemCrew4.addEventListener('click', () => {
-            console.log("first4")
-            sliderRemoveClassCrew(0,1,2,3);
+
+            // Regresar al origen al slide de imagenes
+            itemCrewImage.classList.remove("move100");
+            itemCrewImage.classList.remove("move200");
+            itemCrewImage.classList.remove("move0");
+
+            // Regresar al origen al slide de informacion
+            itemCrewInfo.classList.remove("move100");
+            itemCrewInfo.classList.remove("move200");
+            itemCrewInfo.classList.remove("move0");
+
+            itemCrew1.classList.remove("crew-option-link-active");
+            itemCrew2.classList.remove("crew-option-link-active");
+            itemCrew3.classList.remove("crew-option-link-active");
+
+            itemCrew1.classList.add("crew-option-link-hover");
+            itemCrew2.classList.add("crew-option-link-hover");
+            itemCrew3.classList.add("crew-option-link-hover");
+
+            // Mover los slide al correcto
             itemCrewInfo.classList.add("move300");
             itemCrewImage.classList.add("move300");
-            valorActivoSlideCrew = 3;
+            itemCrew4.classList.add("crew-option-link-active");
         });
     }
 });
@@ -283,31 +309,29 @@ const buttonTechnology3 = document.getElementById('technology-slide-button3');
 // SlideInfo
 const slideInfo = document.getElementById('slideInfoTechnology');
 
+// SlideImage
+const slideImage = document.getElementById('slideImageTechnology');
+
+
 const eliminarEfectoBotonTechnology = (boton) => {
     if (boton == buttonTechnology1){
-
         buttonTechnology2.classList.remove("button-technology-active");
         buttonTechnology2.classList.add("button-technology-hover");
 
         buttonTechnology3.classList.remove("button-technology-active");
         buttonTechnology3.classList.add("button-technology-hover");
-
     } else if(boton == buttonTechnology2){
-
         buttonTechnology1.classList.remove("button-technology-active");
         buttonTechnology1.classList.add("button-technology-hover");
 
         buttonTechnology3.classList.remove("button-technology-active");
         buttonTechnology3.classList.add("button-technology-hover");
-
     } else {
-
         buttonTechnology2.classList.remove("button-technology-active");
         buttonTechnology2.classList.add("button-technology-hover");
 
         buttonTechnology1.classList.remove("button-technology-active");
         buttonTechnology1.classList.add("button-technology-hover");
-
     }
 
     boton.classList.remove("button-technology-hover");
@@ -318,9 +342,17 @@ if ( buttonTechnology1){
     buttonTechnology1.addEventListener('click', () => {
         eliminarEfectoBotonTechnology(buttonTechnology1);
 
+        // Remover a slide de info
         slideInfo.classList.remove("slide-info-item-100");
         slideInfo.classList.remove("slide-info-item-200");
+
+        // Remover a Slide de imagenes
+        slideImage.classList.remove("slide-image-item-100");
+        slideImage.classList.remove("slide-image-item-200");
+        
         slideInfo.classList.add("slide-info-item-0");
+        slideImage.classList.add("slide-image-item-0");
+
     });
 }
 
@@ -328,9 +360,17 @@ if ( buttonTechnology2){
     buttonTechnology2.addEventListener('click', () => {
         eliminarEfectoBotonTechnology(buttonTechnology2);
 
+        // Remover a slide de info
         slideInfo.classList.remove("slide-info-item-0");
         slideInfo.classList.remove("slide-info-item-200");
+
+        // Remover a Slide de imagenes
+        slideImage.classList.remove("slide-image-item-0");
+        slideImage.classList.remove("slide-image-item-200");
+
+        // Agregar a Slide de imagenes e info
         slideInfo.classList.add("slide-info-item-100");
+        slideImage.classList.add("slide-image-item-100");
     });
 }
 
@@ -338,9 +378,16 @@ if ( buttonTechnology3){
     buttonTechnology3.addEventListener('click', () => {
         eliminarEfectoBotonTechnology(buttonTechnology3);
 
-        slideInfo.classList.add("slide-info-item-200");
+        // Remover a slide de info
         slideInfo.classList.remove("slide-info-item-100");
         slideInfo.classList.remove("slide-info-item-0");
+
+        // Remover a Slide de imagenes
+        slideImage.classList.remove("slide-image-item-0");
+        slideImage.classList.remove("slide-image-item-100");
+
+        slideInfo.classList.add("slide-info-item-200");
+        slideImage.classList.add("slide-image-item-200");
 
     });
 

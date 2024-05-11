@@ -45,7 +45,13 @@
     
     &-image{
         grid-area: technology-slide-image;
-        border: 2px solid green;
+        // border: 2px solid green;
+        position: relative;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: flex-end;
+        overflow-y: hidden;
     }
 }
 
@@ -102,4 +108,34 @@
     // border: 2px solid cyan;
     transition: .9s .1s all;
     height: 100%;
+}
+
+.technology-slide-image-container{
+    // border: 2px solid cyan;
+    transition: .9s .1s all;
+    height: 100%;
+    transform: translateY(0%);
+}
+
+.slide-image-item{
+        // border: 2px solid yellow;
+        min-height: 100%;
+        margin: auto;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 10px;
+        
+        &-0{
+            transform: translateY(0%);
+        }
+        
+        &-100{
+            transform: translateY(-100%);
+        }
+        
+        &-200{
+            transform: translateY(-200%);
+        }
 }
