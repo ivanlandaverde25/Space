@@ -262,3 +262,82 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+// Seccion Technology
+// Botones
+const buttonTechnology1 = document.getElementById('technology-slide-button1');
+const buttonTechnology2 = document.getElementById('technology-slide-button2');
+const buttonTechnology3 = document.getElementById('technology-slide-button3');
+
+// SlideInfo
+const slideInfo = document.getElementById('slideInfoTechnology');
+
+const eliminarEfectoBotonTechnology = (boton) => {
+    if (boton == buttonTechnology1){
+
+        buttonTechnology2.classList.remove("button-technology-active");
+        buttonTechnology2.classList.add("button-technology-hover");
+
+        buttonTechnology3.classList.remove("button-technology-active");
+        buttonTechnology3.classList.add("button-technology-hover");
+
+    } else if(boton == buttonTechnology2){
+
+        buttonTechnology1.classList.remove("button-technology-active");
+        buttonTechnology1.classList.add("button-technology-hover");
+
+        buttonTechnology3.classList.remove("button-technology-active");
+        buttonTechnology3.classList.add("button-technology-hover");
+
+    } else {
+
+        buttonTechnology2.classList.remove("button-technology-active");
+        buttonTechnology2.classList.add("button-technology-hover");
+
+        buttonTechnology1.classList.remove("button-technology-active");
+        buttonTechnology1.classList.add("button-technology-hover");
+
+    }
+
+    boton.classList.remove("button-technology-hover");
+    boton.classList.add("button-technology-active");
+};
+
+if ( buttonTechnology1){
+    buttonTechnology1.addEventListener('click', () => {
+        eliminarEfectoBotonTechnology(buttonTechnology1);
+
+        slideInfo.classList.remove("slide-info-item-100");
+        slideInfo.classList.remove("slide-info-item-200");
+        slideInfo.classList.add("slide-info-item-0");
+    });
+}
+
+if ( buttonTechnology2){
+    buttonTechnology2.addEventListener('click', () => {
+        eliminarEfectoBotonTechnology(buttonTechnology2);
+        slideInfo.classList.add("slide-info-item-100");
+    });
+}
+
+if ( buttonTechnology3){
+    buttonTechnology3.addEventListener('click', () => {
+        eliminarEfectoBotonTechnology(buttonTechnology3);
+
+    });
+
+
+
+
+}

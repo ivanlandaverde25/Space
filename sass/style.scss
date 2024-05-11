@@ -13,6 +13,7 @@ body {
 
 :root{
     --colorBlanco: rgba(255, 255, 255, 1);
+    --colorBlanco900: rgba(255, 255, 255, 0.9);
     --colorBlanco500: rgba(255, 255, 255, 0.5);
     --colorNegroBoton: rgba(11, 13, 24, 1);
 }
@@ -32,3 +33,4 @@ body {
 @import "main";
 @import "destination";
 @import "crew";
+@import "technology";

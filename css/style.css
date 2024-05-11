@@ -13,6 +13,7 @@ body {
 
 :root {
   --colorBlanco: rgba(255, 255, 255, 1);
+  --colorBlanco900: rgba(255, 255, 255, 0.9);
   --colorBlanco500: rgba(255, 255, 255, 0.5);
   --colorNegroBoton: rgba(11, 13, 24, 1);
 }
@@ -90,6 +91,14 @@ body {
 
 .texto2 {
   font-size: 1.2em;
+}
+
+.blanco {
+  color: var(--colorBlanco);
+}
+
+.blanco900 {
+  color: var(--colorBlanco900);
 }
 
 .blanco500 {
@@ -565,6 +574,88 @@ body {
 
 .move300 {
   transform: translateX(-300%);
+}
+
+.container-image-technology {
+  background: url(../assets/Desktop/background-technology-desktop.jpg) no-repeat center/cover;
+}
+
+.main-container-technology {
+  width: 80%;
+  margin: auto;
+  position: relative;
+}
+
+.technology-slide {
+  position: relative;
+  height: 75vh;
+  margin: auto;
+  overflow: hidden;
+  display: grid;
+  grid-template: "technology-slide-button technology-slide-info technology-slide-image" auto/10% 45% 45%;
+  border: 5px solid orange;
+}
+
+.technology-slide-button {
+  grid-area: technology-slide-button;
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.technology-slide-info {
+  grid-area: technology-slide-info;
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  border: 2px solid purple;
+  overflow-y: hidden;
+}
+.technology-slide-image {
+  grid-area: technology-slide-image;
+  border: 2px solid green;
+}
+
+.button-technology {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.button-technology-active {
+  color: var(--colorNegroBoton);
+  background-color: var(--colorBlanco900);
+}
+.button-technology-hover {
+  border: 1px solid var(--colorBlanco500);
+  color: var(--colorBlanco);
+  transition: 0.3s 0.1s all linear;
+}
+.button-technology-hover:hover {
+  border: 1px solid var(--colorBlanco900);
+}
+
+.slide-info-item {
+  border: 2px solid yellow;
+  min-height: 100%;
+  width: 80%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  gap: 10px;
+  transition: 0.9s 0.1s all;
+}
+.slide-info-item-0 {
+  transform: translateY(0%);
+}
+.slide-info-item-100 {
+  transform: translateY(-100%);
 }
 
 /*# sourceMappingURL=style.css.map */

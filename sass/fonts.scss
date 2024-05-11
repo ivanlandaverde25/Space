@@ -72,9 +72,18 @@
 }
 
 // Colores
+.blanco{
+    color: var(--colorBlanco);
+}
+
+.blanco900{
+    color: var(--colorBlanco900);
+}
+
 .blanco500{
     color: var(--colorBlanco500);
 }
+
 
 // Estilos
 .mayuscula{

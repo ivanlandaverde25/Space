@@ -1,0 +1,100 @@
+.container-image-technology{
+    @include bg-image("../assets/Desktop/background-technology-desktop.jpg");
+}
+
+// Estilos del contenedor principal
+.main-container-technology{
+    width: 80%;
+    margin: auto;
+    position: relative;
+}
+
+.technology-slide{
+    position: relative;
+    height: 75vh;
+    margin: auto;
+    overflow: hidden;
+    display: grid;
+    grid-template: 
+    "technology-slide-button technology-slide-info technology-slide-image" auto/
+    10% 45% 45%;
+    border: 5px solid orange;
+}
+
+.technology-slide{
+
+    &-button{
+        grid-area: technology-slide-button;
+        position: relative;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        // border: 2px solid brown;
+    }
+    
+    &-info{
+        grid-area: technology-slide-info;
+        position: relative;
+        display: flex;
+        flex-flow: column nowrap;
+        border: 2px solid purple;
+        overflow-y: hidden;
+    }
+    
+    &-image{
+        grid-area: technology-slide-image;
+        border: 2px solid green;
+    }
+}
+
+.button-technology{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+    &-active{
+        color: var(--colorNegroBoton);
+        background-color: var(--colorBlanco900);
+    }
+    
+    &-hover{
+        border: 1px solid var(--colorBlanco500);
+        color: var(--colorBlanco);
+        transition: .3s .1s all linear;
+
+        &:hover{
+            border: 1px solid var(--colorBlanco900);
+        }
+    }
+}
+
+.slide-info-item{
+    border: 2px solid yellow;
+    min-height: 100%;
+    width: 80%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    gap: 10px;
+    transition: .9s .1s all;
+    
+    &-0{
+        transform: translateY(0%);
+    }
+
+    &-100{
+        transform: translateY(-100%);
+    }
+
+    &-200{
+        // transform: translateY(-200%);
+    }
+}
+
