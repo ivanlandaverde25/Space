@@ -327,6 +327,9 @@ if ( buttonTechnology1){
 if ( buttonTechnology2){
     buttonTechnology2.addEventListener('click', () => {
         eliminarEfectoBotonTechnology(buttonTechnology2);
+
+        slideInfo.classList.remove("slide-info-item-0");
+        slideInfo.classList.remove("slide-info-item-200");
         slideInfo.classList.add("slide-info-item-100");
     });
 }
@@ -334,6 +337,10 @@ if ( buttonTechnology2){
 if ( buttonTechnology3){
     buttonTechnology3.addEventListener('click', () => {
         eliminarEfectoBotonTechnology(buttonTechnology3);
+
+        slideInfo.classList.add("slide-info-item-200");
+        slideInfo.classList.remove("slide-info-item-100");
+        slideInfo.classList.remove("slide-info-item-0");
 
     });
 
