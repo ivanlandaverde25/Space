@@ -1,6 +1,5 @@
 // Media Query para version movil
 @media screen and (width >= 375px) and (width <= 768px) {
-    
     .container{
         padding-top: 0px;
         overflow: hidden;
@@ -17,13 +16,13 @@
     // Cambios en el menu
     .menu{
         width: 60%;
-        padding-left: 20px;
-        padding-top: 30px;
+        padding: 30px;
         position: absolute;
         top: 0;
         bottom: 0;
         z-index: 10;
         right: -60%;
+        backdrop-filter: blur(35px);
         transition: .6s .1s all ease-in-out;
         
         &-toggle{
@@ -36,6 +35,17 @@
         
         &-list{
             display: block;
+            width: 100%;
+            text-align: start;
+            height: 100%;
+
+            &-box{
+                justify-content: flex-start;
+
+                &:hover .menu-list-item-link-hover{
+                    left: 0%;
+                }
+            }
             
             &-item-link{
                 font-size: 1.1em;
@@ -45,6 +55,11 @@
 
                 &-active{
                     width: 100%;
+                }
+                
+                &-hover{
+                    width: 100%;
+                    left: -100%;
                 }
             }
         }
@@ -59,6 +74,7 @@
         @include bg-image("../assets/Mobile/background-home-mobile.jpg");
         overflow: hidden;
     }
+
 
     .main-container{
         // background-color: green;
@@ -80,6 +96,8 @@
             font-size: 12px;
             width: 95%;
             margin: auto;
+            padding-top: 10px;
+            gap: 20px;
         }
 
         // Cambios en contenedor de descripcion para adaptar el contenido de boton
@@ -188,6 +206,7 @@
             font-size: 15px;
             width: 70%;
             margin: auto;
+            padding-top: 20px;
         }
 
         &-action{
