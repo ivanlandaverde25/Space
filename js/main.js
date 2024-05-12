@@ -287,6 +287,113 @@ window.addEventListener('DOMContentLoaded', () => {
             itemCrew4.classList.add("crew-option-link-active");
         });
     }
+
+
+    // Seccion Technology
+    // Botones
+    const buttonTechnology1 = document.getElementById('technology-slide-button1');
+    const buttonTechnology2 = document.getElementById('technology-slide-button2');
+    const buttonTechnology3 = document.getElementById('technology-slide-button3');
+
+    // SlideInfo
+    const slideInfo = document.getElementById('slideInfoTechnology');
+
+    // SlideImage
+    const slideImage = document.getElementById('slideImageTechnology');
+
+
+    const eliminarEfectoBotonTechnology = (boton) => {
+        if (boton == buttonTechnology1){
+            buttonTechnology2.classList.remove("button-technology-active");
+            buttonTechnology2.classList.add("button-technology-hover");
+
+            buttonTechnology3.classList.remove("button-technology-active");
+            buttonTechnology3.classList.add("button-technology-hover");
+        } else if(boton == buttonTechnology2){
+            buttonTechnology1.classList.remove("button-technology-active");
+            buttonTechnology1.classList.add("button-technology-hover");
+
+            buttonTechnology3.classList.remove("button-technology-active");
+            buttonTechnology3.classList.add("button-technology-hover");
+        } else {
+            buttonTechnology2.classList.remove("button-technology-active");
+            buttonTechnology2.classList.add("button-technology-hover");
+
+            buttonTechnology1.classList.remove("button-technology-active");
+            buttonTechnology1.classList.add("button-technology-hover");
+        }
+
+        boton.classList.remove("button-technology-hover");
+        boton.classList.add("button-technology-active");
+    };
+
+    if ( buttonTechnology1){
+        buttonTechnology1.addEventListener('click', () => {
+            eliminarEfectoBotonTechnology(buttonTechnology1);
+
+            // Remover a slide de info
+            slideInfo.classList.remove("slide-info-item-100");
+            slideInfo.classList.remove("slide-info-item-200");
+
+            // Remover a Slide de imagenes
+            slideImage.classList.remove("slide-image-item-100");
+            slideImage.classList.remove("slide-image-item-200");
+            
+            slideInfo.classList.add("slide-info-item-0");
+            slideImage.classList.add("slide-image-item-0");
+
+        });
+    }
+
+    if ( buttonTechnology2){
+        buttonTechnology2.addEventListener('click', () => {
+            eliminarEfectoBotonTechnology(buttonTechnology2);
+
+            // Remover a slide de info
+            slideInfo.classList.remove("slide-info-item-0");
+            slideInfo.classList.remove("slide-info-item-200");
+
+            // Remover a Slide de imagenes
+            slideImage.classList.remove("slide-image-item-0");
+            slideImage.classList.remove("slide-image-item-200");
+
+            // Agregar a Slide de imagenes e info
+            slideInfo.classList.add("slide-info-item-100");
+            slideImage.classList.add("slide-image-item-100");
+        });
+    }
+
+    if ( buttonTechnology3){
+        buttonTechnology3.addEventListener('click', () => {
+            eliminarEfectoBotonTechnology(buttonTechnology3);
+
+            // Remover a slide de info
+            slideInfo.classList.remove("slide-info-item-100");
+            slideInfo.classList.remove("slide-info-item-0");
+
+            // Remover a Slide de imagenes
+            slideImage.classList.remove("slide-image-item-0");
+            slideImage.classList.remove("slide-image-item-100");
+
+            slideInfo.classList.add("slide-info-item-200");
+            slideImage.classList.add("slide-image-item-200");
+
+        });
+    }
+
+
+    // MENU HAMBURGUESA
+    const iconHamburguer = document.getElementById("iconHamburguer");
+    const iconClose = document.getElementById("iconClose");
+    const menuMovil = document.getElementById("menuMovil");
+
+    iconHamburguer.addEventListener('click', () => {
+        menuMovil.classList.toggle("menu-toggle");
+    });
+
+    iconClose.addEventListener('click', () => {
+        menuMovil.classList.toggle("menu-toggle");
+    });
 });
 
 
@@ -299,99 +406,3 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 
-
-// Seccion Technology
-// Botones
-const buttonTechnology1 = document.getElementById('technology-slide-button1');
-const buttonTechnology2 = document.getElementById('technology-slide-button2');
-const buttonTechnology3 = document.getElementById('technology-slide-button3');
-
-// SlideInfo
-const slideInfo = document.getElementById('slideInfoTechnology');
-
-// SlideImage
-const slideImage = document.getElementById('slideImageTechnology');
-
-
-const eliminarEfectoBotonTechnology = (boton) => {
-    if (boton == buttonTechnology1){
-        buttonTechnology2.classList.remove("button-technology-active");
-        buttonTechnology2.classList.add("button-technology-hover");
-
-        buttonTechnology3.classList.remove("button-technology-active");
-        buttonTechnology3.classList.add("button-technology-hover");
-    } else if(boton == buttonTechnology2){
-        buttonTechnology1.classList.remove("button-technology-active");
-        buttonTechnology1.classList.add("button-technology-hover");
-
-        buttonTechnology3.classList.remove("button-technology-active");
-        buttonTechnology3.classList.add("button-technology-hover");
-    } else {
-        buttonTechnology2.classList.remove("button-technology-active");
-        buttonTechnology2.classList.add("button-technology-hover");
-
-        buttonTechnology1.classList.remove("button-technology-active");
-        buttonTechnology1.classList.add("button-technology-hover");
-    }
-
-    boton.classList.remove("button-technology-hover");
-    boton.classList.add("button-technology-active");
-};
-
-if ( buttonTechnology1){
-    buttonTechnology1.addEventListener('click', () => {
-        eliminarEfectoBotonTechnology(buttonTechnology1);
-
-        // Remover a slide de info
-        slideInfo.classList.remove("slide-info-item-100");
-        slideInfo.classList.remove("slide-info-item-200");
-
-        // Remover a Slide de imagenes
-        slideImage.classList.remove("slide-image-item-100");
-        slideImage.classList.remove("slide-image-item-200");
-        
-        slideInfo.classList.add("slide-info-item-0");
-        slideImage.classList.add("slide-image-item-0");
-
-    });
-}
-
-if ( buttonTechnology2){
-    buttonTechnology2.addEventListener('click', () => {
-        eliminarEfectoBotonTechnology(buttonTechnology2);
-
-        // Remover a slide de info
-        slideInfo.classList.remove("slide-info-item-0");
-        slideInfo.classList.remove("slide-info-item-200");
-
-        // Remover a Slide de imagenes
-        slideImage.classList.remove("slide-image-item-0");
-        slideImage.classList.remove("slide-image-item-200");
-
-        // Agregar a Slide de imagenes e info
-        slideInfo.classList.add("slide-info-item-100");
-        slideImage.classList.add("slide-image-item-100");
-    });
-}
-
-if ( buttonTechnology3){
-    buttonTechnology3.addEventListener('click', () => {
-        eliminarEfectoBotonTechnology(buttonTechnology3);
-
-        // Remover a slide de info
-        slideInfo.classList.remove("slide-info-item-100");
-        slideInfo.classList.remove("slide-info-item-0");
-
-        // Remover a Slide de imagenes
-        slideImage.classList.remove("slide-image-item-0");
-        slideImage.classList.remove("slide-image-item-100");
-
-        slideInfo.classList.add("slide-info-item-200");
-        slideImage.classList.add("slide-image-item-200");
-
-    });
-
-
-
-
-}

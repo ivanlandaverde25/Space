@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600&family=Cormorant+Garamond:wght@300;400&display=swap" rel="stylesheet">
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Space 🚀</title>
 </head>
 <body>
@@ -19,10 +21,23 @@
             <div>
                 <img class="icon" src="assets/Logos/logo.svg" alt="">
             </div>
+
+            <!-- Menu Hamburguesa -->
+            <div class="iconHamburguer" id="iconHamburguer">
+                <i class="fa-solid fa-bars icon2"></i>
+            </div>
+
             <!-- Menu -->
-            <menu class="menu">
+            <menu class="menu" id="menuMovil">
                 <!-- Lista de opciones de menu -->
                 <ul class="menu-list">
+                    <!-- Opcion Cerrar -->
+                    <div class="menu-list-box iconClose option-close">
+                        <li class="menu-list-item icon2" id="iconClose">
+                            <i class="fa-solid fa-xmark"></i>
+                        </li>
+                    </div>
+
                     <!-- Opcion 01 - HOME -->
                     <div class="menu-list-box">
                         <li class="menu-list-item">

@@ -13,7 +13,7 @@
     position: relative;
     width: 65%;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     backdrop-filter: blur(25px);
     padding-left: 60px;
     background-color: rgba($color: #ffffff, $alpha: 0.03);
