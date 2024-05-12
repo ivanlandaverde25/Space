@@ -121,6 +121,10 @@ body {
   letter-spacing: 5px;
 }
 
+.spacing25 {
+  letter-spacing: 25px;
+}
+
 .line-height40 {
   line-height: 40px;
 }
@@ -696,6 +700,114 @@ body {
 }
 .slide-image-item-200 {
   transform: translateY(-200%);
+}
+
+@media screen and (width >= 375px) and (width <= 768px) {
+  .container-image-home {
+    background: url(../assets/Mobile/background-home-mobile.jpg) no-repeat center/cover;
+  }
+  .main-container {
+    grid-template: "main-container-description" auto "main-container-action" auto/100%;
+  }
+  .main-container-description {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 12px;
+    width: 95%;
+    margin: auto;
+  }
+  .main-container-action {
+    align-items: center;
+    padding-top: 20px;
+  }
+  .main-container-action-button {
+    width: 175px;
+    height: 175px;
+  }
+  .text600 {
+    font-weight: 300;
+  }
+  .titulo1 {
+    font-size: 7em;
+  }
+  .titulo2 {
+    font-size: 1.4em;
+  }
+  .texto2 {
+    font-size: 1.3em;
+  }
+  .spacing25 {
+    letter-spacing: 10px;
+  }
+}
+@media screen and (width >= 768px) and (width <= 1330px) {
+  .menu {
+    width: 65%;
+    padding-left: 20px;
+  }
+  .menu::after {
+    display: none;
+  }
+  .menu-list-item-link {
+    font-size: 0.9em;
+    width: 105px;
+    height: 30px;
+  }
+  .hidden {
+    display: none;
+  }
+  .container-image-home {
+    background: url(../assets/Tablet/background-home-tablet.jpg) no-repeat center/cover;
+  }
+  .main-container {
+    grid-template: "main-container-description" auto "main-container-action" auto/100%;
+  }
+  .main-container-description {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 15px;
+    width: 70%;
+    margin: auto;
+  }
+  .main-container-action {
+    align-items: center;
+    padding-top: 20px;
+  }
+  .main-container-action-button {
+    width: 225px;
+    height: 225px;
+  }
+  .text600 {
+    font-weight: 300;
+  }
+  .titulo2 {
+    font-size: 1.5em;
+  }
+  .icon {
+    width: 50px;
+  }
+  .texto2 {
+    font-size: 1.3em;
+  }
+  .spacing25 {
+    letter-spacing: 10px;
+  }
+}
+@media screen and (width >= 1000px) and (width <= 1330px) {
+  .menu {
+    width: 65%;
+    padding-left: 30px;
+  }
+  .menu::after {
+    display: none;
+  }
+  .menu-list-item-link {
+    font-size: 1.2em;
+    width: 125px;
+    height: 30px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

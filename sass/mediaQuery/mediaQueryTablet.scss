@@ -1,0 +1,169 @@
+// Media Query para version movil
+@media screen and (width >= 375px) and (width <= 768px) {
+    
+    // Cambio de fondo de pantalla para version movil
+    .container-image-home{
+        @include bg-image("../assets/Mobile/background-home-mobile.jpg");
+    }
+
+    .main-container{
+        // background-color: green;
+    }
+
+    // Cambios generales dentro del contenedor en version movil
+    .main-container{
+        grid-template: 
+        "main-container-description" auto
+        "main-container-action" auto/
+        100%;
+        
+        // Cambios en contenedor de descripcion para adaptar el contenido de descriocion
+        &-description{
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 12px;
+            width: 95%;
+            margin: auto;
+        }
+
+        // Cambios en contenedor de descripcion para adaptar el contenido de boton
+        &-action{
+            align-items: center;
+            padding-top: 20px;
+
+            &-button{
+                width: 175px;
+                height: 175px;
+            }
+        }
+    }
+
+    .text600{
+        font-weight: 300;
+    }
+
+    .titulo1{
+        font-size: 7em;
+    }
+
+    .titulo2{
+        font-size: 1.4em;
+    }
+
+    .texto2{
+        font-size: 1.3em;
+    }
+
+    .spacing25{
+        letter-spacing: 10px;
+    }
+
+}
+
+// Media Query para version Tablet
+@media screen and (width >= 768px) and (width <= 1330px) {
+    
+    // Menu
+    .container-menu{
+        // border: 2px solid red;
+    }
+
+    .menu{
+
+        width: 65%;
+        padding-left: 20px;
+
+        &::after{
+            display: none;
+        }
+
+        &-list{
+
+            &-item-link{
+                font-size: 0.9em;
+                width: 105px;
+                height: 30px;
+            }
+        }
+    }
+
+    .hidden{
+        display: none;
+    }
+
+    // Main View
+    .container-image-home{
+        @include bg-image("../assets/Tablet/background-home-tablet.jpg");
+    }
+
+    .main-container{
+        // background-color: Blue;
+        grid-template: 
+        "main-container-description" auto
+        "main-container-action" auto/
+        100%;
+        
+        &-description{
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 15px;
+            width: 70%;
+            margin: auto;
+        }
+
+        &-action{
+            align-items: center;
+            padding-top: 20px;
+
+            &-button{
+                width: 225px;
+                height: 225px;
+            }
+        }
+    }
+
+    .text600{
+        font-weight: 300;
+    }
+
+    .titulo2{
+        font-size: 1.5em;
+    }
+
+    .icon{
+        width: 50px;
+    }
+
+    .texto2{
+        font-size: 1.3em;
+    }
+
+    .spacing25{
+        letter-spacing: 10px;
+    }
+}
+
+// Media Query para hacer mas grande el menu cuando escala en version tablet
+@media screen and (width >= 1000px) and (width <= 1330px) {
+    .menu{
+
+        width: 65%;
+        padding-left: 30px;
+
+        &::after{
+            display: none;
+        }
+
+        &-list{
+
+            &-item-link{
+                // border: 2px solid white;
+                font-size: 1.2em;
+                width: 125px;
+                height: 30px;
+            }
+        }
+    }
+}
