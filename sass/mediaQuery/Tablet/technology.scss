@@ -11,10 +11,22 @@
         "technology-slide-button" auto
         "technology-slide-info" auto/
         100%;
+        // border: 2px solid pink;
+        gap: 10px;
 
         &-image{
-            border: 2px solid wheat;
+            // border: 2px solid wheat;
             align-items: center;
+            margin: 0;
+            position: relative;
+        }
+
+        &-info{
+            font-size: 15px;
+            // border: 2px solid orange;
+            width: 80%;
+            margin: 0 auto;
+
         }
 
         &-button{
@@ -23,13 +35,21 @@
     }
 
     .slide-image-item{
-        border: 2px solid red;
+        // border: 2px solid red;
         height: auto;
+        object-fit: cover;
+        margin: 0;
+    }
+
+    .button-technology{
+        width: 70px;
+        height: 70px;
     }
 
     // Mostrar imagenes en tamano landscape
     .imageLandscape{
         display: visible;
+        // border: 2px solid cyan;
     }
 
     .imageDesktop{
@@ -39,6 +59,11 @@
     .slide-info-item{
         align-items: center;
         text-align: center;
+    }
+
+    .margin90{
+        width: 90%;
+        margin: auto;
     }
 }
 

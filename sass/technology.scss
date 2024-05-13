@@ -23,6 +23,8 @@
 
 .technology-slide{
 
+    position: relative;
+
     &-button{
         grid-area: technology-slide-button;
         position: relative;
@@ -31,7 +33,6 @@
         justify-content: center;
         align-items: center;
         gap: 30px;
-        // border: 2px solid brown;
     }
     
     &-info{
@@ -39,13 +40,11 @@
         position: relative;
         display: flex;
         flex-flow: column nowrap;
-        // border: 2px solid purple;
         overflow-y: hidden;
     }
     
     &-image{
         grid-area: technology-slide-image;
-        // border: 2px solid green;
         position: relative;
         display: flex;
         flex-flow: column nowrap;
