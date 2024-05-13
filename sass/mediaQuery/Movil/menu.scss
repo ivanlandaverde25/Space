@@ -1,0 +1,88 @@
+@media screen  and (width <= 768px) {
+    .container{
+        padding-top: 0px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    // Menu
+    .container-menu{
+        // border: 2px solid red;
+        margin-left: 0px;
+        padding: 0px 20px;
+    }
+    
+    // Cambios en el menu
+    .menu{
+        width: 60%;
+        padding: 30px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        z-index: 10;
+        right: -60%;
+        backdrop-filter: blur(35px);
+        transition: .6s .1s all ease-in-out;
+        
+        &-toggle{
+            right: 0%;
+        }
+        
+        &::after{
+            display: none;
+        }
+        
+        &-list{
+            display: block;
+            width: 100%;
+            text-align: start;
+            height: 100%;
+
+            &-box{
+                justify-content: flex-start;
+
+                &:hover .menu-list-item-link-hover{
+                    left: 0%;
+                }
+            }
+            
+            &-item-link{
+                font-size: 1.1em;
+                width: 180px;
+                justify-content: flex-start;
+                height: 30px;
+
+                &-active{
+                    width: 100%;
+                }
+                
+                &-hover{
+                    width: 100%;
+                    left: -100%;
+                }
+            }
+        }
+    }
+
+    .option-close{
+        justify-content: flex-end;
+    }
+
+    
+    .icon{
+        width: 40px;
+    }
+
+    .icon2{
+        // border: 2px solid wheat;
+        font-size: 30px;
+    }
+
+    .iconClose{
+        cursor: pointer;
+    }
+
+    .iconHamburguer{
+        cursor: pointer;
+    }
+}

@@ -34,4 +34,13 @@ body {
 @import "destination";
 @import "crew";
 @import "technology";
-@import "./mediaQuery/mediaQueryTablet";
+
+// MediaQuery Movil
+@import "./mediaQuery/Movil/menu";
+@import "./mediaQuery/Movil/main";
+
+// MediaQuery Tablet
+@import "./mediaQuery/Tablet/menu";
+@import "./mediaQuery/Tablet/main";
+@import "./mediaQuery/Tablet/destination";
+@import "./mediaQuery/Tablet/technology";

@@ -1,0 +1,42 @@
+@media screen and (width >= 768px) and (width <= 1330px) {
+    
+    // Cambio de fondo de pantalla
+    .container-image-destination{
+        @include bg-image("../assets/Tablet/background-destination-tablet.jpg");
+    }
+    
+    // Cambios en la orientacion del slide de destination
+    .main-container-destination{
+        
+        &-slide{
+            grid-template: 
+            "main-container-destination-tabs-image" auto 
+            "main-container-destination-action" auto/
+            100%;
+
+            &-image{
+                border: 2px solid white;
+                height: 80%;
+            }
+        }
+
+        &-action{
+            border: 2px solid green;
+            align-items: center;
+        }
+    }
+
+    .slide{
+
+        border: 2px solid purple;
+
+        &-item{
+        }
+
+        &-destination-image{
+            width: 70%;
+            height: 70%;
+            object-fit: contain;
+        }
+    }
+}

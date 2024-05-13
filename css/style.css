@@ -275,6 +275,7 @@ body {
 .main-container-destination {
   width: 80%;
   margin: auto;
+  padding-top: 20px;
   position: relative;
 }
 .main-container-destination-slide {
@@ -702,7 +703,7 @@ body {
   transform: translateY(-200%);
 }
 
-@media screen and (width >= 375px) and (width <= 768px) {
+@media screen and (width <= 768px) {
   .container {
     padding-top: 0px;
     overflow: hidden;
@@ -757,12 +758,22 @@ body {
   .option-close {
     justify-content: flex-end;
   }
+  .icon {
+    width: 40px;
+  }
+  .icon2 {
+    font-size: 30px;
+  }
+  .iconClose {
+    cursor: pointer;
+  }
+  .iconHamburguer {
+    cursor: pointer;
+  }
+}
+@media screen and (width <= 768px) {
   .container-image-home {
     background: url(../assets/Mobile/background-home-mobile.jpg) no-repeat center/cover;
-    overflow: hidden;
-  }
-  .main-container {
-    overflow: hidden;
   }
   .main-container {
     grid-template: "main-container-description" auto "main-container-action" auto/100%;
@@ -796,35 +807,23 @@ body {
     font-size: 1.4em;
   }
   .texto2 {
-    font-size: 1.3em;
+    font-size: 1.6em;
   }
   .spacing25 {
     letter-spacing: 10px;
   }
-  .icon {
-    width: 40px;
-  }
-  .icon2 {
-    font-size: 30px;
-  }
-  .iconClose {
-    cursor: pointer;
-  }
-  .iconHamburguer {
-    cursor: pointer;
-  }
 }
-@media screen and (width >= 768px) and (width <= 1330px) {
+@media screen and (width > 768px) and (width <= 1330px) {
   .menu {
-    width: 65%;
-    padding-left: 20px;
+    width: 75%;
+    padding-left: 10px;
   }
   .menu::after {
     display: none;
   }
   .menu-list-item-link {
-    font-size: 0.9em;
-    width: 105px;
+    font-size: 1em;
+    width: 125px;
     height: 30px;
   }
   .hidden {
@@ -832,6 +831,45 @@ body {
   }
   .iconHamburguer {
     display: none;
+  }
+  .iconClose {
+    display: none;
+  }
+  .icon {
+    width: 50px;
+  }
+}
+@media screen and (width >= 1000px) and (width <= 1330px) {
+  .menu {
+    width: 65%;
+    padding-left: 30px;
+  }
+  .menu::after {
+    display: none;
+  }
+  .menu-list-item-link {
+    font-size: 1.1em;
+    width: 145px;
+    height: 30px;
+  }
+  .iconHamburguer {
+    display: none;
+  }
+  .iconClose {
+    display: none;
+  }
+}
+@media screen and (width > 1330px) {
+  .iconHamburguer {
+    display: none;
+  }
+  .iconClose {
+    display: none;
+  }
+}
+@media screen and (width >= 768px) and (width <= 1330px) {
+  .container {
+    padding-top: 5px;
   }
   .container-image-home {
     background: url(../assets/Tablet/background-home-tablet.jpg) no-repeat center/cover;
@@ -862,44 +900,71 @@ body {
   .titulo2 {
     font-size: 1.5em;
   }
-  .icon {
-    width: 50px;
-  }
   .texto2 {
     font-size: 1.3em;
   }
   .spacing25 {
     letter-spacing: 10px;
   }
-  .iconClose {
-    display: none;
+}
+@media screen and (width >= 768px) and (width <= 1330px) {
+  .container-image-destination {
+    background: url(../assets/Tablet/background-destination-tablet.jpg) no-repeat center/cover;
+  }
+  .main-container-destination-slide {
+    grid-template: "main-container-destination-tabs-image" auto "main-container-destination-action" auto/100%;
+  }
+  .main-container-destination-slide-image {
+    border: 2px solid white;
+    height: 80%;
+  }
+  .main-container-destination-action {
+    border: 2px solid green;
+    align-items: center;
+  }
+  .slide {
+    border: 2px solid purple;
+  }
+  .slide-destination-image {
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
   }
 }
-@media screen and (width >= 1000px) and (width <= 1330px) {
-  .menu {
-    width: 65%;
-    padding-left: 30px;
+@media screen and (width >= 768px) and (width <= 1330px) {
+  .main-container-technology {
+    width: 100%;
   }
-  .menu::after {
+  .technology-slide {
+    grid-template: "technology-slide-image" auto "technology-slide-button" auto "technology-slide-info" auto/100%;
+  }
+  .technology-slide-image {
+    border: 2px solid wheat;
+    align-items: center;
+  }
+  .technology-slide-button {
+    flex-flow: row nowrap;
+  }
+  .slide-image-item {
+    border: 2px solid red;
+    height: auto;
+  }
+  .imageLandscape {
+    display: visible;
+  }
+  .imageDesktop {
     display: none;
   }
-  .menu-list-item-link {
-    font-size: 1.2em;
-    width: 125px;
-    height: 30px;
-  }
-  .iconHamburguer {
-    display: none;
-  }
-  .iconClose {
-    display: none;
+  .slide-info-item {
+    align-items: center;
+    text-align: center;
   }
 }
 @media screen and (width > 1330px) {
-  .iconHamburguer {
-    display: none;
+  .imageDesktop {
+    display: visible;
   }
-  .iconClose {
+  .imageLandscape {
     display: none;
   }
 }

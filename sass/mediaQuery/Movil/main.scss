@@ -1,0 +1,65 @@
+// Media Query para version movil
+@media screen and (width <= 768px) {
+    
+    // Cambio de fondo de pantalla para version movil
+    .container-image-home{
+        @include bg-image("../assets/Mobile/background-home-mobile.jpg");
+    }
+
+
+    .main-container{
+        // background-color: green;
+    }
+
+    // Cambios generales dentro del contenedor en version movil
+    .main-container{
+        grid-template: 
+        "main-container-description" auto
+        "main-container-action" auto/
+        100%;
+        
+        // Cambios en contenedor de descripcion para adaptar el contenido de descriocion
+        &-description{
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 12px;
+            width: 95%;
+            margin: auto;
+            padding-top: 10px;
+            gap: 20px;
+        }
+
+        // Cambios en contenedor de descripcion para adaptar el contenido de boton
+        &-action{
+            align-items: center;
+            padding-top: 20px;
+            z-index: 1;
+
+            &-button{
+                width: 175px;
+                height: 175px;
+            }
+        }
+    }
+
+    .text600{
+        font-weight: 300;
+    }
+
+    .titulo1{
+        font-size: 7em;
+    }
+
+    .titulo2{
+        font-size: 1.4em;
+    }
+
+    .texto2{
+        font-size: 1.6em;
+    }
+
+    .spacing25{
+        letter-spacing: 10px;
+    }
+}

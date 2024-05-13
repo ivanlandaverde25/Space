@@ -1,0 +1,59 @@
+// Media Query para version Tablet
+@media screen and (width >= 768px) and (width <= 1330px) {
+    
+    .container{
+        padding-top: 5px;
+    }
+    
+    // Main View
+    .container-image-home{
+        @include bg-image("../assets/Tablet/background-home-tablet.jpg");
+    }
+
+    .main-container{
+        // background-color: Blue;
+        grid-template: 
+        "main-container-description" auto
+        "main-container-action" auto/
+        100%;
+        
+        &-description{
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 15px;
+            width: 70%;
+            margin: auto;
+            padding-top: 20px;
+        }
+
+        &-action{
+            align-items: center;
+            padding-top: 20px;
+
+            &-button{
+                width: 225px;
+                height: 225px;
+            }
+        }
+    }
+
+    .text600{
+        font-weight: 300;
+    }
+
+    .titulo2{
+        font-size: 1.5em;
+    }
+
+
+    .texto2{
+        font-size: 1.3em;
+    }
+
+    .spacing25{
+        letter-spacing: 10px;
+    }
+
+}
+
